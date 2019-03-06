@@ -1,0 +1,123 @@
+
+  <header class="tophead post animatedParent">
+      <div class="headstand">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-12 col-md-12 col-xs-12">
+                      <div class="navbar navbar-default " role="navigation">
+                          <div class="navbar-header logo">
+                            
+  
+                              <a >
+                                  <img  class="ygbuslogo" src="assets/blog4.png" alt="blog4-logo"/>
+                              </a>
+                          </div>
+                          
+                          <div class="collapse navbar-collapse"> 
+                              
+                              <h3 class="col-lg-4 title">ADMINISTRATION</h3>
+
+                                
+  
+                                  <div  class="nav profile_det">
+                                      <a class="loginsignup" (click)="openModal(loginModal)" >Login </a>
+                                  </div>
+                                         
+                                  
+                           </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+  </header>
+  <!--End Header Part-->
+
+ 
+<!--Popup Login-->
+<ng-template #loginModal>
+    <button type="button" class="close login-close" (click)="closeModal()">
+        <svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="web_login-flow-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1080.000000, -95.000000)">
+                <g id="Page-1" transform="translate(1080.000000, 95.000000)" fill="#FFFFFF">
+                    <path d="M12.9456547,11.0002293 L21.5968814,2.34864183 C22.1343729,1.81158665 22.1343729,0.94019054 21.5968814,0.403135358 C21.05939,-0.134378453 20.1894061,-0.134378453 19.6514561,0.403135358 L11.0002293,9.05472284 L2.34900252,0.403135358 C1.81151112,-0.134378453 0.940609952,-0.134378453 0.403118551,0.403135358 C-0.13437285,0.94019054 -0.13437285,1.81158665 0.403118551,2.34864183 L9.05526255,11.0002293 L0.403118551,19.6518168 C-0.13437285,20.1893306 -0.13437285,21.0602681 0.403118551,21.5973233 C0.671864251,21.8656215 1.02407705,22 1.37583123,22 C1.72804403,22 2.08025682,21.8656215 2.34900252,21.5968646 L11.0002293,12.9452772 L19.6514561,21.5968646 C19.9202018,21.8656215 20.2728732,22 20.6241688,22 C20.9763816,22 21.3281357,21.8656215 21.5968814,21.5968646 C22.1343729,21.0598095 22.1343729,20.1884134 21.5968814,19.6513582 L12.9456547,11.0002293 Z" id="Fill-1"></path>
+                </g>
+            </g>
+        </svg>
+    </button>
+    <div class="modal-body">
+        <div class="login-details">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12 ">
+                    
+                    <div  class="col-sm-12 xs-12 mobilelogindiv ">
+                        <p class="mobileLogIn">LOG IN</p>
+                    </div>
+                
+                    
+                    <div class="form-login">
+                        <ul class="log-det clearfix">
+                            <li>
+                                <div class="form-group">
+                                    <label for="mob-email" class="sr-only"></label>
+                                    <input id="mob-email" class="form-control input-group-lg " type="email" name="userName" required   placeholder="Mobile or Email" [(ngModel)]="userName" />
+                                    <!-- <div class="shake-tooltip-login-email" *ngIf="loginEmailError != ''">{{loginEmailError}}</div>
+                                    <div class="shake-tooltip-login-email" *ngIf="loginAPIError != ''">{{loginAPIError}}</div> -->
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-group">
+                                    <label for="passwordField" class="sr-only"></label>
+                                    <input id="passwordField" type="password" class="form-control input-group-lg"  placeholder="Password" name="password"   value="" autocomplete="off" [(ngModel)]="password" />
+                                    <!-- <div class="shake-tooltip-login-email" *ngIf="loginPasswordError != ''">{{loginPasswordError}}</div> -->
+                                    <span class="eye">
+                                        <svg (click)="passwordshow()" width="24px" height="16px" viewBox="0 0 24 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+                                        <desc>Created with Sketch.</desc>
+                                        <defs></defs>
+                                        <g id="web_login-flow-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-959.000000, -238.000000)">
+                                        <g id="Page-1" transform="translate(959.000000, 238.000000)">
+                                        <g id="Group-3">
+                                        <path d="M11.838328,13.7892107 C8.45338417,13.7892107 5.15171685,11.8465347 2.01660247,8.01233967 C2.51136271,7.4023541 3.41760671,6.38229418 4.63246353,5.36730893 C6.33723095,3.94747779 9.02162365,2.25592114 12.156738,2.25592114 C15.5416818,2.25592114 18.8433491,4.19864832 21.9784635,8.03279213 C21.4837523,8.64282897 20.5775083,9.66801482 19.3626025,10.6778229 C17.657884,12.097654 14.9734423,13.7892107 11.838328,13.7892107 Z M12.1616366,0.40546069 C10.5352961,0.40546069 8.88936101,0.784779453 7.26302043,1.52803919 C5.9844816,2.11752105 4.71574,2.93249254 3.49603355,3.95260372 C1.43366715,5.68004187 0.218810327,7.4023541 0.169824164,7.4741171 C-0.0653094134,7.81242843 -0.0554631948,8.27376207 0.194317246,8.60182154 C3.81444361,13.2715431 7.73333657,15.6345452 11.838328,15.6345452 C13.4647175,15.6345452 15.1106036,15.2552777 16.7369442,14.5120179 C18.015483,13.9225361 19.2842246,13.1074621 20.504029,12.0874534 C22.5662975,10.3600153 23.7811543,8.63765178 23.8301404,8.56594003 C24.065274,8.22757744 24.0555258,7.76629507 23.8056474,7.4382356 C20.1806714,2.77364 16.266726,0.40546069 12.1616366,0.40546069 Z" id="eye" fill="#BBBBBB"></path>
+                                        <circle id="eye-2" stroke="#BBBBBB" stroke-width="1.5" cx="12" cy="8" r="2.75"></circle>
+                                        </g>
+                                        </g>
+                                        </g>
+                                        </svg>
+                                        </span>
+                                </div>
+                            </li>
+                            
+                           <li>
+                            <div class="form-group">
+                                
+                                <select class="form-control input-group-lg" name="userType" (change)="onChangeOfUserType($event)">
+                                    <option value="" disabled selected><p class ="userTypePlaceholder">User Type</p></option>
+                                    <option value="admin">Admin</option>
+                                    <option value="staff">Staff</option>
+                                    <option value="student">Student</option>
+                                    
+                                  </select>
+                            </div>
+                           </li>
+
+
+                            <li>
+                                <div  id="login_load" class="form-group sub-btn">
+                                    <button type="submit" class="form-control btn" (click)="login()">
+                                        LOGIN</button>
+                                </div>
+                            </li>
+                          
+                               
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>
+<!--End Popup Login-->

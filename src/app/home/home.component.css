@@ -1,0 +1,88 @@
+
+.tophead {
+    min-height: 75px;
+}
+.headstand {
+    position: fixed;
+    width: 100%;
+    /* z-index: 1111; */
+    background: white;
+}
+.navbar-default {
+    border: none;
+    background: none;
+    padding-top: 15px;
+    line-height: 3.429;
+}
+
+.navbar {
+    margin-bottom: 0px;
+}
+.logo {
+    height: 51px;
+    margin-top: -10px;
+
+
+}
+.navbar-collapse {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.profile_det {
+    margin-top: 0px !important;
+    margin-left: 20px;
+    float: right;
+}
+.ygbuslogo {
+	/* margin-top: 12px; */
+	height:55px;
+	/* padding-left:10px; */
+}
+
+.loginsignup {
+     cursor: pointer; 
+    font-family: 'Poppins', sans-serif; 
+    color: #666666;
+    font-size: 14px; 
+    font-weight: 600; 
+    outline: none; 
+	letter-spacing: 1px;
+	margin-top: 12%;
+}
+
+input#mob-email {
+    margin-top: 50px;
+}
+.form-control {
+    width: 90%!important;
+    height: 48px;
+    margin-bottom: 0;
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    background-color: #e9f3ec;
+    color: #333;
+    padding-left: 15px;
+    
+}
+.form-control {
+        padding: 13px 12px;
+}
+ul{
+    list-style-type: none;
+}
+.mobileLogIn{
+    font-size: 24px;
+    text-align: center;
+}
+.eye{
+    top: 40%!important;
+    position: absolute;
+    right: 44px;
+    padding: 5px 35px 0 0;
+}
+.eye svg{
+    cursor: pointer;
+}
+/* .UserTypeplaceholder{
+
+} */
