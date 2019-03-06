@@ -83,6 +83,24 @@ ul{
 .eye svg{
     cursor: pointer;
 }
-/* .UserTypeplaceholder{
-
-} */
+[class^='shake-tooltip-user']{
+	left: -11px;
+    top: 35px;
+    color:red;
+}
+[class^='shake-tooltip-password']{
+	left: -3px;
+    top: 35px;
+    color:red;
+}
+[class^='shake-tooltip-select']{
+	left: -3px;
+    top: 35px;
+    color:red;
+}
+.loader-value{
+	height: 15px;
+	width: 15px;
+	margin-left: 4px;
+	margin-top:-4px;
+}

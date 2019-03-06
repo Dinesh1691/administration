@@ -18,6 +18,12 @@ export class HomeComponent implements OnInit {
   password: string;
   userType: string;
   jsonData: any = [];
+  userNameError:any;
+  loginPasswordError:any;
+  selectTypeError:any;
+  loader:any;
+  contactButtonValue: any;
+
 
   constructor(public modalService: BsModalService, private http: HttpClient, private global: GlobalService, private route: Router) {
     //console.log(global);
@@ -39,9 +45,13 @@ export class HomeComponent implements OnInit {
   }
   closeModal() {
     this.modalRef.hide();
-    this.modalRef = null;
   }
   ngOnInit() {
+    this.userNameError='';
+    this.loginPasswordError='';
+    this.selectTypeError='';
+    this.contactButtonValue="login"
+
 
   }
 
@@ -52,6 +62,33 @@ export class HomeComponent implements OnInit {
   }
 
   login() {
+    const regex_username = /^[a-zA-Z][a-zA-Z ]+[a-zA-Z]$/;
+    if (this.userName === undefined || this.userName === '' || this.userName == null) {
+      this.userNameError = 'Please provide your name';
+      document.getElementById('name').style.border = '1px solid #FD4545';
+      setTimeout(() => {
+          this.userNameError = '';
+      }, 2000);
+    }
+      else if (this.password === undefined || this.password === '' || this.password == null) {
+
+        this.loginPasswordError = 'Please enter password';
+        document.getElementById('passwordField').style.border = '1px solid #FD4545';
+        setTimeout(() => {
+          this.loginPasswordError = '';
+        }, 2000);
+      } 
+      else if (this.userType === undefined || this.userType === '' || this.userType == null) {
+
+        this.selectTypeError = 'Please Select User Type';
+        document.getElementById('select').style.border = '1px solid #FD4545';
+        setTimeout(() => {
+          this.selectTypeError = '';
+        }, 2000);
+      } 
+      else{
+
+
 
     this.global.getJson().subscribe(data => {
       this.jsonData = data;
@@ -62,6 +99,7 @@ export class HomeComponent implements OnInit {
         .filter(z => z.userType == this.userType);
       console.log(userAccepted)
       if (userAccepted && userAccepted.length === 1) {
+        localStorage.setItem("currentUser",userAccepted[0].userName);
         if ("admin" == this.userType) {
           console.log("admin executed")
           this.closeModal();
@@ -80,6 +118,7 @@ export class HomeComponent implements OnInit {
 
       }
       else {
+        this.contactButtonValue="login"
         alert("invalid")
       }
 
@@ -87,4 +126,13 @@ export class HomeComponent implements OnInit {
 
     });
   }
+  }
+  onKeyPress(event: any) {
+    if (event.target.value === '') {
+        document.getElementById(event.target.id).style.border = '1px solid #FD4545';
+    } else {
+          document.getElementById(event.target.id).style.border = '1px solid #E8E8E8';
+    }
+}
+
 }
