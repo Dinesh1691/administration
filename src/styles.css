@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background-color:aqua;
+}
+
+.title{
+    margin-top: 10px!important;
+    font-family: 'Poppins', sans-serif; 
+    color: #666666;
+    font-weight: 600; 
+    outline: none; 
+}
