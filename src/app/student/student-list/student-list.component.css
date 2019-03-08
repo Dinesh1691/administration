@@ -67,14 +67,15 @@
     .logout-btn{
         position: relative;
         top: 20px;
-        width: 100px;
+        width: 120px;
         height: 35px;
         background-color: orange;
-        font-family: poppins;
+        font-family: 'poppins',sans-serif;
         font-size: 16px;
         border: none;
         border-radius: 5px;
-        color: black;
+        color: white;
+        font-weight: 400;
     }
     .title-header{
         display: inline-block;

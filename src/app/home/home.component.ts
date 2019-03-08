@@ -6,6 +6,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { GlobalService } from '../global.service';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -23,7 +24,7 @@ export class HomeComponent implements OnInit {
   selectTypeError:any;
   loader:any;
   contactButtonValue: any;
-
+  invalid: string;
 
   constructor(public modalService: BsModalService, private http: HttpClient, private global: GlobalService, private route: Router) {
     //console.log(global);
@@ -115,21 +116,18 @@ export class HomeComponent implements OnInit {
           this.closeModal();
           this.route.navigate(['/student']);
         }
-
+      
       }
-     
-
-
-
-    });
+    
  else {
        $('.invalid-div').fadeIn().fadeOut(2000);
-        this.invalid="Invalid Credentials"
-  	
+        this.invalid="Invalid Credentials";
        
       }
 
 
+    });
+  }
   }
   onKeyPress(event: any) {
     if (event.target.value === '') {
@@ -138,5 +136,6 @@ export class HomeComponent implements OnInit {
           document.getElementById(event.target.id).style.border = '1px solid #E8E8E8';
     }
 }
+  
 
 }
