@@ -117,15 +117,19 @@ export class HomeComponent implements OnInit {
         }
 
       }
-      else {
-        this.contactButtonValue="login"
-        alert("invalid")
-      }
+     
 
 
 
     });
-  }
+ else {
+       $('.invalid-div').fadeIn().fadeOut(2000);
+        this.invalid="Invalid Credentials"
+  	
+       
+      }
+
+
   }
   onKeyPress(event: any) {
     if (event.target.value === '') {
