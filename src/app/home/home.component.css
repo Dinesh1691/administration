@@ -129,7 +129,8 @@ ul{
     float: right;
 }
 .ygbuslogo {
-	height:55px;
+    height:45px;
+    margin-top: 10px;
 }
 
 .loginsignup {
@@ -188,4 +189,15 @@ ul{
     background-color: orange;
     color: white;
     font-weight: 400;
+}
+.bg{
+    background-image: url("/assets/school.png");
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden; 
+    overflow-y: auto;
 }

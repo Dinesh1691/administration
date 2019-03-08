@@ -1,12 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
-body{
-    background-color: antiquewhite;
-}
-
 .title{
     margin-top: 10px!important;
-    font-family: 'Poppins', sans-serif; 
-    color: #666666;
-    font-weight: 600; 
+    font-family: initial; 
+    color: #000000;
+    font-weight: 500; 
     outline: none; 
 }
+
+body, html {
+    height: 100%;
+    background-color: antiquewhite;
+  }
