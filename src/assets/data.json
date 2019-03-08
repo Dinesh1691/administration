@@ -1,58 +1,135 @@
 [  
    {  
-      "id":"admin1",
+      "id":1,
       "userName":"admin",
       "email":"admin@g.com",
       "password":"admin",
       "userType":"admin"
    },
    {  
-      "id":"staff1",
+      "id":2,
       "userName":"dhivya",
       "email":"dhivya@g.com",
-      "password":"741",
-      "userType":"staff"
+      "password":"dhivya123",
+      "userType":"staff",
+      "phoneno":"9191919191",
+      "designation":"Professor"
    },
    {  
-      "id":"staff2",
+      "id":3,
       "userName":"ravali",
       "email":"ravali@g.com",
-      "password":"1234",
-      "userType":"staff"
+      "password":"ravali123",
+      "userType":"staff",
+      "phoneno":"9292929292",
+      "designation":"Assistant Professor"
    },
    {  
-      "id":"student1",
+      "id":4,
       "userName":"dinesh",
       "email":"dinesh@g.com",
-      "password":"123456",
-      "userType":"student"
+      "password":"dinesh123",
+      "userType":"staff",
+      "phoneno":"9393939393",
+      "designation":"Assistant Professor"
    },
    {  
-      "id":"student2",
+      "id":5,
       "userName":"sindhuja",
       "email":"sindhuja@g.com",
-      "password":"1234",
-      "userType":"student"
+      "password":"sidhuja123",
+      "userType":"staff",
+      "phoneno":"9494949494",
+      "designation":"Assistant Professor"
    },
    {  
-      "id":"student3",
+      "id":6,
       "userName":"naveen",
       "email":"naveen@g.com",
-      "password":"123",
-      "userType":"student"
+      "password":"naveen123",
+      "userType":"staff",
+      "phoneno":"9595959595",
+      "designation":"Professor"
    },
    {  
-      "id":"student4",
+      "id":7,
       "userName":"vetrivel",
       "email":"vetrivel@g.com",
-      "password":"789",
-      "userType":"student"
+      "password":"vetrivel123",
+      "userType":"student",
+      "phoneno":"9696969696",
+      "department":"MECH"
    },
    {  
-      "id":"student5",
+      "id":8,
       "userName":"kavya",
       "email":"kavya@g.com",
-      "password":"789789",
-      "userType":"student"
-   }
+      "password":"kavya123",
+      "userType":"student",
+      "phoneno":"9797979797",
+      "department":"EC"
+   },
+   {  
+    "id":9,
+    "userName":"priyanka",
+    "email":"priyanka@g.com",
+    "password":"priyanka123",
+    "userType":"student",
+    "phoneno":"9898989898",
+    "department":"CS"
+ },
+ {  
+    "id":10,
+    "userName":"vijay",
+    "email":"vijay@g.com",
+    "password":"vijay123",
+    "userType":"student",
+    "phoneno":"9999999999",
+    "department":"CS"
+ },
+ {  
+    "id":11,
+    "userName":"satvika",
+    "email":"satvika@g.com",
+    "password":"satvika123",
+    "userType":"student",
+    "phoneno":"9999999991",
+    "department":"IT"
+ },
+ {  
+    "id":12,
+    "userName":"praveen",
+    "email":"praveen@g.com",
+    "password":"praveen123",
+    "userType":"student",
+    "phoneno":"9999999992",
+    "department":"MECH"
+ },
+ {  
+    "id":13,
+    "userName":"anusha",
+    "email":"anusha@g.com",
+    "password":"anusha123",
+    "userType":"student",
+    "phoneno":"9999999993",
+    "department":"CIVIL"
+ },
+ {  
+    "id":14,
+    "userName":"prasanthi",
+    "email":"prasanthi@g.com",
+    "password":"prasanthi123",
+    "userType":"student",
+    "phoneno":"9999999994",
+    "department":"EE"
+ },
+ {  
+    "id":15,
+    "userName":"uma",
+    "email":"uma@g.com",
+    "password":"uma123",
+    "userType":"student",
+    "phoneno":"9999999995",
+    "department":"EI"
+ }
 ]
