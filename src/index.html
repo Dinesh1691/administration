@@ -16,6 +16,14 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<!-- Back button disable -->
+<script type = "text/javascript" >
+  history.pushState(null, null, 'Home');
+  window.addEventListener('popstate', function(event) {
+  history.pushState(null, null, 'Home');
+  });
+</script>
 </head>
 <body>
   <app-root></app-root>
