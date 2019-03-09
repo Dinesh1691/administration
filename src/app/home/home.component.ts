@@ -120,8 +120,11 @@ export class HomeComponent implements OnInit {
       }
     
  else {
-       $('.invalid-div').fadeIn().fadeOut(2000);
-        this.invalid="Invalid Credentials";
+       this.invalid="Invalid Credentials!!!"; 
+  
+  setTimeout(() => {
+    this.invalid=''; 
+  }, 2000);
        
       }
 

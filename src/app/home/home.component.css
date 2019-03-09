@@ -201,3 +201,9 @@ ul{
     overflow-x: hidden; 
     overflow-y: auto;
 }
+.invalid-div{
+    text-align: center;
+    font-family: initial;
+    font-size: 20px;
+    color: red;
+}
