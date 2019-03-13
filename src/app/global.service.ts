@@ -9,10 +9,12 @@ export class GlobalService {
 jsonData : any;
   
   constructor(private http : HttpClient) {
+    console.log("service");
     this.getJson();
    }
 
    public getJson(){
-      return this.http.get('assets/data.json')
+      return this.http.get('http://localhost:5000/data')
    }
+
 }

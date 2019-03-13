@@ -9,12 +9,14 @@ import { HomeComponent } from './home/home.component';
 import { GlobalService } from './global.service';
 import { FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { NumbersOnlyDirective } from './numbers-only.directive';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    NumbersOnlyDirective
   ],
   imports: [
     BrowserModule,

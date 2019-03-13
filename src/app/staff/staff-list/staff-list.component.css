@@ -1,0 +1,28 @@
+#username::first-letter{
+    text-transform: capitalize;
+}
+.logout-btn{
+    position: relative;
+    top: 20px;
+    width: 120px;
+    height: 35px;
+    background-color: orange;
+    font-family: 'poppins',sans-serif;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: 400;
+   
+}
+.title-header{
+    display: inline-block;
+    color: #000;
+}
+.titlename{
+    display: inherit;
+}
+hr{
+    margin-top: 0%;
+    border-top: 1px solid #000;
+}

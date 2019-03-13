@@ -1,3 +1,14 @@
-<p>
-  admin-list works!
-</p>
+<div class="container-fluid">
+    <div class="title">
+        <h1 class="title-header">Hi,
+            <p id="username" class="titlename">{{currentUser}}.</p>
+        </h1>
+        <button class="logout-btn pull-right" routerLink="/Home">Logout</button>
+    </div>
+
+    <hr>
+    <h3 class="title-subheader"> Your Student and Staff Information :</h3>
+
+    <button type="button" class="logout-btn" routerLink="/admin/adminCrud">Staff List</button>
+
+    <button type="button" class="logout-btn" routerLink="/admin/studentcrud">Student List</button>

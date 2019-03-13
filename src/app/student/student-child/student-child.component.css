@@ -1,0 +1,97 @@
+.table_class{
+    margin-top: 30px;
+    padding-bottom: 12px;
+   
+  }
+
+  .bs-component{
+    max-width: 101% !important;
+    height: auto !important;
+    margin-left: -2px;
+  }
+  .scroll-value{
+    border-collapse: collapse;
+    display: block;
+    max-height: 300px;
+    /* overflow-x: scroll !important; */
+    /* width:50%; */
+  }
+  .tablediv{
+  background: #fff;
+  }
+  .history_table_tr {
+    color: #333333;
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 18px;
+    background-color: #F2F2F2;
+    border-radius: 5px 5px 0 0;
+  }
+  .history_table_tr th{
+    border-left: 1px solid #e8e8e8;
+    border-bottom: 1px solid #ddd !important;
+  }
+  .history_table{
+    height: 239px;
+    width: 228% !important;
+    border: 1px solid #E8E8E8;
+    border-radius: 5px;
+    margin: 0px;
+    background: white;
+  }
+  .history_table_tr_td{
+    border-left: 1px solid #e8e8e8;
+    color: #666666; 
+    font-family: Poppins;   
+    font-size: 12px;    
+    letter-spacing: 1.17px; 
+    line-height: 42px;
+  }
+  
+    .table-history {
+        color: #143049; 
+        margin-top: 30px;   
+        font-family: Poppins;    
+        padding-bottom: 15px;   
+        font-size: 18px;    
+        font-weight: 500;   
+        letter-spacing: 0.64px; 
+        line-height: 27px;
+    }
+
+    #username::first-letter{
+        text-transform: capitalize;
+    }
+    .logout-btn{
+        position: relative;
+        top: 20px;
+        width: 120px;
+        height: 35px;
+        background-color: orange;
+        font-family: 'poppins',sans-serif;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-weight: 400;
+    }
+    .title-header{
+        display: inline-block;
+        color: #000;
+    }
+    .titlename{
+        display: inherit;
+    }
+    hr{
+        margin-top: 0%;
+        border-top: 1px solid #000;
+    }
+    .table>tbody>tr>td{
+        padding: 10px;
+        vertical-align: top;
+        border-top: 1px solid #ddd;
+    }
+    
+

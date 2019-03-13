@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { HttpErrorResponse } from '@angular/common/http';
 import { GlobalService } from '../global.service';
 import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 
 @Component({
@@ -37,14 +38,16 @@ export class HomeComponent implements OnInit {
   };
   //data : String[];
 
-  openModal(template: TemplateRef<any>, cssClass: any) {
+  openModal(template: TemplateRef<any>) {
     if (this.modalRef) {
       this.closeModal();
     }
-    this.config.class = cssClass;
+    // this.config.class = cssClass;
     this.modalRef = this.modalService.show(template, this.config);
   }
   closeModal() {
+    this.userName='';
+    this.password = '';
     this.modalRef.hide();
   }
   ngOnInit() {
@@ -124,7 +127,7 @@ export class HomeComponent implements OnInit {
   
   setTimeout(() => {
     this.invalid=''; 
-  }, 2000);
+  }, 1000);
        
       }
 

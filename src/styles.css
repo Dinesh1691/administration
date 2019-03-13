@@ -12,3 +12,6 @@ body, html {
     background-color: antiquewhite;
 	overflow : hidden;
   }
+  table td[class*=col-], table th[class*=col-]{
+      float:left!important;
+  }
