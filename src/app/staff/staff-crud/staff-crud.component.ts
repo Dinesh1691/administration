@@ -118,6 +118,8 @@ console.log("data value"+ JSON.stringify(this.dobj));
   addStudents(){
     const regex_phone = /^\d{10}$/;
     const regex_username = /^[a-zA-Z][a-zA-Z ]+[a-zA-Z]$/;
+    const  regex_email  = /^[a-z][a-zA-Z0-9_]*(\.[a-zA-Z][a-zA-Z0-9_]*)?@[a-z][a-zA-Z-0-9]*\.[a-z]+(\.[a]+)?$/;
+
      if (this.userName === undefined || this.userName === '' || this.userName == null) {
       this.updateNameError = 'Please provide your name';
       setTimeout(() => {
@@ -129,8 +131,14 @@ console.log("data value"+ JSON.stringify(this.dobj));
       setTimeout(() => {
         this. updateEmailError= '';
       }, 3000);
-    }
-    else if (this.password === undefined  || this.password === null) {
+    } 
+    else if (!regex_email.test(this.Email)) {
+      this.updateEmailError = 'Please enter valid email id';
+      setTimeout(() => {
+          this. updateEmailError = '';
+      }, 2000);
+  } 
+  else if (this.password === undefined  || this.password === null) {
       this.updatePasswordError = 'please enter password';
       setTimeout(() => {
         this. updatePasswordError= '';

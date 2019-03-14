@@ -111,6 +111,7 @@ this.updateDesgError='';
       addStaff(){
         const regex_phone = /^\d{10}$/;
         const regex_username = /^[a-zA-Z][a-zA-Z ]+[a-zA-Z]$/;
+        const  regex_email  = /^[a-z][a-zA-Z0-9_]*(\.[a-zA-Z][a-zA-Z0-9_]*)?@[a-z][a-zA-Z-0-9]*\.[a-z]+(\.[a]+)?$/;
          if (this.userName === undefined || this.userName === '' || this.userName == null) {
           this.updateNameError = 'Please provide your name';
           setTimeout(() => {
@@ -121,32 +122,38 @@ this.updateDesgError='';
           this. updateEmailError= 'please enter Email';
           setTimeout(() => {
             this. updateEmailError= '';
-          }, 3000);
+          }, 2000);
         }
+        else if (!regex_email.test(this.Email)) {
+          this.updateEmailError = 'Please enter valid email id';
+          setTimeout(() => {
+              this. updateEmailError = '';
+          }, 2000);
+      } 
         else if (this.password === undefined  || this.password === null) {
           this.updatePasswordError = 'please enter password';
           setTimeout(() => {
             this. updatePasswordError= '';
-          }, 3000);
+          }, 2000);
         }
         
         else if (this.mobile === undefined  || this.mobile === null) {
           this.updateContactError = 'please enter contact number';
           setTimeout(() => {
             this.updateContactError = '';
-          }, 3000);
+          }, 2000);
         }
         else if (!regex_phone.test(this.mobile)) {
           this.updateContactError = 'Please enter valid contact number';
           setTimeout(() => {
             this.updateContactError = '';
-          }, 3000);
+          }, 2000);
         }
         else if (this.designation === undefined  || this.designation === null) {
           this.updateDesgError = 'please enter designation';
           setTimeout(() => {
             this.updateDesgError = '';
-          }, 3000);
+          }, 2000);
         }
   
     else{
