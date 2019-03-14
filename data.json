@@ -8,7 +8,7 @@
       "userType": "admin"
     },
     {
-      "userName": "ravali ",
+      "userName": "ravali",
       "email": "ravali@g.com",
       "phoneno": "9292929292",
       "designation": "Assistant Professor",
@@ -17,13 +17,13 @@
       "id": 3
     },
     {
-      "id": 4,
       "userName": "dinesh",
       "email": "dinesh@g.com",
-      "password": "dinesh123",
-      "userType": "staff",
       "phoneno": "9393939393",
-      "designation": "Assistant Professor"
+      "designation": "Assistant Professor",
+      "userType": "staff",
+      "password": "dinesh123",
+      "id": 4
     },
     {
       "userName": "sindhuja",
@@ -35,10 +35,10 @@
       "id": 5
     },
     {
-      "userName": "priyanka poondla",
+      "userName": "priyanka",
       "email": "priyanka@g.com",
       "phoneno": "9999999999",
-      "department": "MCA",
+      "department": "CS",
       "userType": "student",
       "password": "priyanka123",
       "id": 9
@@ -62,13 +62,13 @@
       "id": 11
     },
     {
-      "id": 12,
       "userName": "praveen",
       "email": "praveen@g.com",
-      "password": "praveen123",
-      "userType": "student",
       "phoneno": "9999999992",
-      "department": "MECH"
+      "department": "EEE",
+      "userType": "student",
+      "password": "praveen123",
+      "id": 12
     },
     {
       "id": 13,
@@ -89,13 +89,13 @@
       "id": 14
     },
     {
-      "id": 15,
       "userName": "uma",
       "email": "uma@g.com",
-      "password": "uma123",
-      "userType": "student",
       "phoneno": "9999999995",
-      "department": "EI"
+      "department": "EEE",
+      "userType": "student",
+      "password": "uma123",
+      "id": 15
     },
     {
       "userName": "shilpa",
@@ -132,6 +132,15 @@
       "userType": "staff",
       "password": "rajkumar123",
       "id": 21
+    },
+    {
+      "userName": "shrey",
+      "email": "shrey@g.com",
+      "phoneno": "8550862708",
+      "department": "EEE",
+      "userType": "student",
+      "password": "shrey123",
+      "id": 22
     }
   ]
 }

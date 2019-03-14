@@ -157,8 +157,8 @@ console.log("data value"+ JSON.stringify(this.dobj));
         this.updateContactError = '';
       }, 3000);
     }
-    else if (this.designation === undefined  || this.designation === null) {
-      this.updateDeparError = 'please enter designation';
+    else if (this.department === undefined  || this.department === null) {
+      this.updateDeparError = 'please enter department';
       setTimeout(() => {
         this.updateDeparError = '';
       }, 3000);
