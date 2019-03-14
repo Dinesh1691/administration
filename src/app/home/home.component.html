@@ -5,24 +5,17 @@
                 <div class="col-lg-12 col-md-12 col-xs-12">
                     <div class="navbar navbar-default " role="navigation">
                         <div class="navbar-header logo">
-
-
                             <a>
                                 <img class="ygbuslogo" src="assets/SchoolImage.png" alt="schoolImage-logo" />
                             </a>
                         </div>
-
                         <div class="collapse navbar-collapse">
-
                             <h3 class="col-lg-4 title">ADMINISTRATION</h3>
-
-
-
                             <div class="nav profile_det">
-                                <button class="loginsignup" (click)="openModal(loginModal)"><p class="login">Login</p> </button>
+                                <button class="loginsignup" (click)="openModal(loginModal)">
+                                    <p class="login">Login</p>
+                                </button>
                             </div>
-
-
                         </div>
                     </div>
                 </div>
@@ -52,12 +45,9 @@
         <div class="login-details">
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12 ">
-
                     <div class="col-sm-12 xs-12 mobilelogindiv ">
                         <p class="mobileLogIn">LOG IN</p>
                     </div>
-
-
                     <div class="form-login">
                         <ul class="log-det clearfix">
                             <li>
@@ -65,14 +55,14 @@
                                     <label for="name" class="sr-only"></label>
                                     <input id="name" (keyup)="onKeyPress($event)" class="form-control input-group-lg " type="text" name="userName" required placeholder="Name"
                                         [(ngModel)]="userName" autofocus />
-                                     <div class="shake-tooltip-user" *ngIf="userNameError != ''">{{userNameError}}</div>
+                                    <div class="shake-tooltip-user" *ngIf="userNameError != ''">{{userNameError}}</div>
                                 </div>
                             </li>
                             <li>
                                 <div class="form-group">
                                     <label for="passwordField" class="sr-only"></label>
-                                    <input id="passwordField" (keyup)="onKeyPress($event)" type="password" class="form-control input-group-lg" placeholder="Password" name="password" value=""
-                                        autocomplete="off" [(ngModel)]="password" />
+                                    <input id="passwordField" (keyup)="onKeyPress($event)" type="password" class="form-control input-group-lg" placeholder="Password"
+                                        name="password" value="" autocomplete="off" [(ngModel)]="password" />
                                     <div class="shake-tooltip-password" *ngIf="loginPasswordError != ''">{{loginPasswordError}}</div>
                                     <span class="eye">
                                         <svg (click)="passwordshow()" width="24px" height="16px" viewBox="0 0 24 16" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -93,40 +83,30 @@
                                     </span>
                                 </div>
                             </li>
-
                             <li>
                                 <div class="form-group">
-
                                     <select id="select" (keyup)="onKeyPress($event)" class="form-control input-group-lg" name="userType" (change)="onChangeOfUserType($event)">
-
                                         <option value="" disabled selected>
                                             <p class="userTypePlaceholder">User Type</p>
                                         </option>
                                         <option value="admin">Admin</option>
                                         <option value="staff">Staff</option>
                                         <option value="student">Student</option>
-
                                     </select>
                                     <div class="shake-tooltip-select" *ngIf="selectTypeError != ''">{{selectTypeError}}</div>
-
                                 </div>
                             </li>
-
-
                             <li>
                                 <div id="login_load" class="form-group sub-btn">
                                     <button type="submit" (click)="login()" class="form-control btn">
-                                       Login
+                                        Login
                                         <!-- <img class="loader-value" *ngIf="contactButtonValue=='Authenticating'" src="assets/orange-loader.gif"/> -->
                                     </button>
-
                                 </div>
                             </li>
-  <li>
+                            <li>
                                 <div class="invalid-div">{{this.invalid}}</div>
                             </li>
-
-
                         </ul>
                     </div>
                 </div>

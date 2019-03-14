@@ -189,8 +189,8 @@
     .tag-class{
         left: 4.5%;
         position: relative;
-        }
-        .back-btn{
+    }
+    .back-btn{
         border: none;
         background-color: antiquewhite;
         cursor: pointer;
@@ -198,4 +198,8 @@
         position: relative;
         top: 50px;
         left: 1%;
-        }
+    }
+
+    .border-div{
+        border-bottom: 1px solid #e8e8e8;
+    }
