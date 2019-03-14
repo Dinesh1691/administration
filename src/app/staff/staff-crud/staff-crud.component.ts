@@ -37,6 +37,7 @@ export class StaffCrudComponent implements OnInit {
   updateEmailError:any;
   updatePasswordError:any;
   updateDeparError:any;
+  localType:any;
 
 
   constructor(private modalService: BsModalService,
@@ -53,7 +54,7 @@ this.updateEmailError='';
 this.updateNameError='';
 this.updatePasswordError='';
 this.updateDeparError='';
-    
+    this.localType = localStorage.getItem('userType');
 
     // this.name= this.data.
   }
@@ -184,4 +185,15 @@ else{
     });
   }
   }
+    
+toRoute(){
+  console.log("getting userType" + JSON.stringify(this.localType));
+  if(this.localType=='staff'){
+      this.router.navigate(['/staff']);
+  }else if(this.localType=='admin'){
+      this.router.navigate(['/admin']);
+  }else{
+    console.log("the usertype received is incorrect ");
+  }
+}
 }

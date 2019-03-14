@@ -1,115 +1,122 @@
 <div class="container">
 
-    <h2>Staff Details :</h2>
-  <button type="button" class="logout-btn"(click)="openModal(addModal)">Add Staff</button>
-  
-  <div class="col-sm-12 col-xs-12  table_class">
-    <div class="bs-component scroll-value" >
-      <table class="table history_table">
-        <thead>
-          <tr class="history_table_tr">
-            <th class="col-xs-2">NAME</th>
-            <th class="col-xs-2">EMAIL ID</th>
-            <th class="col-xs-2">MOBILE NUMBER</th>
-            <th class="border-class col-xs-2">DESIGNATION</th>
-           </tr>
-        </thead>
-  
-  
-        
-         <tbody>
-  
-          <tr class="border-div"  *ngFor="let data of this.data">
-            <!-- <app-student-child  [data]="data"></app-student-child>  -->
-              <ng-container *ngIf = "this.data.userType == 'staff'">
-                <td id="username" class="history_table_tr_td col-xs-2 " >{{data.userName}}</td>                                        
-                <td class="history_table_tr_td col-xs-2">{{data.email}}</td>
-                <td class="history_table_tr_td col-xs-2">{{data.phoneno}}</td>
-                <td class="history_table_tr_td col-xs-2 designation-cap">{{data.designation}}</td>
-                <td class="col-xs-2 history_table_tr_td" (click)="updateStaff(data);openModal(updateModal)"><a class="update-div">Update</a></td>
-                <td class="col-xs-2" (click)="deleteStaff(data.id)"><a>Delete</a></td>
-              </ng-container> 
-  
-          </tr>
-         
-        </tbody> 
-      
-      </table> 
-    </div>
-    </div> 
-  
-    <button class="back-btn" type="button" routerLink="/admin">Back</button>
-  
-     <ng-template #updateModal>
-      <div class="col-sm-11 editcomponent pull-right">
-          <div class="row total">
-              <div class="col-lg-3 "></div>
-              <div class="col-lg-4 mid">
-                  <div class="title">Edit Staff</div>
-                  <div class="entire">
-                      <div class="col-xs-12 editdata">NAME</div>
-                      <input type="text" class="etextbox" [(ngModel)]="dobj.userName" name="name">
-                      <div class="col-xs-12 editdata">EMAIL ID </div>
-                      <input type="text" class="etextbox" [(ngModel)]="dobj.email" name="email" >
-                      <div class="col-xs-12 editdata">MOBILE NUMBER</div>
-                      <input type="text" class="etextbox" appNumbersOnly [(ngModel)]="dobj.phoneno" name="phone">
-                      <div class="col-xs-12 editdata">DESIGNATION</div>
-                      <input type="text" class="etextbox designation-cap" [(ngModel)]="dobj.designation" name="designation">
-                     
-                       <input type="button" class="update-button" value="Update" (click)="updateDetails()">
-                       
-                        <input type="button" (click)="this.modalRef.hide()" class="cancel-button" value="Cancel">
-                    
-                  </div>
-              </div>
-             
-          </div>
-      </div>
-  </ng-template>
-   
-  
-  
-  <ng-template #addModal>
-    <div class="col-sm-11 editcomponent pull-right">
-        <div class="row total">
-            <div class="col-lg-3 "></div>
-            <div class="col-lg-4 mid">
-                <div class="title">Add Staff</div>
-                <div class="entire">
-                    <div class="col-xs-12 editdata">NAME</div>
-                    <input type="text" class="etextbox" [(ngModel)]="userName" name="name">
-                    <div class="shake-tooltip-contact" *ngIf="updateNameError != ''">{{updateNameError}}</div>
+    <button class="back-btn" type="button" routerLink="/admin">
+        <img src="assets/back-arrow.svg" alt="back" />
+    </button>
+    <h2 class="staff-header">Staff Details :</h2>
+    <button type="button" class="logout-btn" (click)="openModal(addModal)">Add Staff</button>
 
-                    <div class="col-xs-12 editdata">EMAIL ID </div>
-                    <input type="text" class="etextbox" [(ngModel)]="Email" name="Email" >
-                    <div class="shake-tooltip-contact" *ngIf="updateEmailError != ''">{{updateEmailError}}</div>
-
-                    <div class="col-xs-12 editdata">PASSWORD</div>
-                    <input type="text" class="etextbox" [(ngModel)]="password" name="password">
-                    <div class="shake-tooltip-contact" *ngIf="updatePasswordError != ''">{{updatePasswordError}}</div>
+    <div class="col-sm-12 col-xs-12  table_class">
+        <div class="bs-component scroll-value">
+            <table class="table history_table">
+                <thead>
+                    <tr class="history_table_tr">
+                        <th class="col-xs-2">NAME</th>
+                        <th class="col-xs-2">EMAIL ID</th>
+                        <th class="col-xs-2">MOBILE NUMBER</th>
+                        <th class="border-class col-xs-2">DESIGNATION</th>
+                    </tr>
+                </thead>
 
 
-                    <div class="col-xs-12 editdata">MOBILE NUMBER</div>
-                    <input type="text" id="updateContact" class="etextbox" appNumbersOnly="true" [(ngModel)]="mobile" name="phone"  required minlength="10" maxlength="10">
-                    <div class="shake-tooltip-contact" *ngIf="updateContactError != ''">{{updateContactError}}</div>
 
-    
-                    <div class="col-xs-12 editdata">DESIGNATION</div>
-                    <input type="text" class="etextbox designation-cap" [(ngModel)]="designation" name="designation">
-                    <div class="shake-tooltip-contact" *ngIf="updateDesgError != ''">{{updateDesgError}}</div>
+                <tbody>
 
-                    
-                    <div class="col-xs-12 editdata">USER TYPE</div>
-                    <input type="text" class="etextbox" value="staff" name="userType" disabled>
-                   
-                     <input type="button" class="update-button" (click)="addStaff()" value="Add" >
-                     
-                      <input type="button" (click)="this.modalRef.hide()" class="cancel-button" value="Cancel">
-                  
-                </div>
-            </div>
-           
+                    <tr class="border-div" *ngFor="let data of this.data">
+                        <!-- <app-student-child  [data]="data"></app-student-child>  -->
+                        <ng-container *ngIf="this.data.userType == 'staff'">
+                            <td id="username" class="history_table_tr_td col-xs-2 ">{{data.userName}}</td>
+                            <td class="history_table_tr_td col-xs-2">{{data.email}}</td>
+                            <td class="history_table_tr_td col-xs-2">{{data.phoneno}}</td>
+                            <td class="history_table_tr_td col-xs-2 designation-cap">{{data.designation}}</td>
+                            <td class="col-xs-2 history_table_tr_td" (click)="updateStaff(data);openModal(updateModal)">
+                                <a class="update-div">Update</a>
+                            </td>
+                            <td class="col-xs-2" (click)="deleteStaff(data.id)">
+                                <a>Delete</a>
+                            </td>
+                        </ng-container>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
         </div>
     </div>
-  </ng-template>
-  </div>
+
+
+    <ng-template #updateModal>
+        <div class="col-sm-11 editcomponent pull-right">
+            <div class="row total">
+                <div class="col-lg-3 "></div>
+                <div class="col-lg-4 mid">
+                    <div class="title">Edit Staff</div>
+                    <div class="entire">
+                        <div class="col-xs-12 editdata">NAME</div>
+                        <input type="text" class="etextbox" [(ngModel)]="dobj.userName" name="name">
+                        <div class="col-xs-12 editdata">EMAIL ID </div>
+                        <input type="text" class="etextbox" [(ngModel)]="dobj.email" name="email">
+                        <div class="col-xs-12 editdata">MOBILE NUMBER</div>
+                        <input type="text" class="etextbox" appNumbersOnly [(ngModel)]="dobj.phoneno" name="phone">
+                        <div class="col-xs-12 editdata">DESIGNATION</div>
+                        <input type="text" class="etextbox designation-cap" [(ngModel)]="dobj.designation" name="designation">
+
+                        <input type="button" class="update-button" value="Update" (click)="updateDetails()">
+
+                        <input type="button" (click)="this.modalRef.hide()" class="cancel-button" value="Cancel">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </ng-template>
+
+
+
+    <ng-template #addModal>
+        <div class="col-sm-11 editcomponent pull-right">
+            <div class="row total">
+                <div class="col-lg-3 "></div>
+                <div class="col-lg-4 mid">
+                    <div class="title">Add Staff</div>
+                    <div class="entire">
+                        <div class="col-xs-12 editdata">NAME</div>
+                        <input type="text" class="etextbox" [(ngModel)]="userName" name="name">
+                        <div class="shake-tooltip-contact" *ngIf="updateNameError != ''">{{updateNameError}}</div>
+
+                        <div class="col-xs-12 editdata">EMAIL ID </div>
+                        <input type="text" class="etextbox" [(ngModel)]="Email" name="Email">
+                        <div class="shake-tooltip-contact" *ngIf="updateEmailError != ''">{{updateEmailError}}</div>
+
+                        <div class="col-xs-12 editdata">PASSWORD</div>
+                        <input type="text" class="etextbox" [(ngModel)]="password" name="password">
+                        <div class="shake-tooltip-contact" *ngIf="updatePasswordError != ''">{{updatePasswordError}}</div>
+
+
+                        <div class="col-xs-12 editdata">MOBILE NUMBER</div>
+                        <input type="text" id="updateContact" class="etextbox" appNumbersOnly="true" [(ngModel)]="mobile" name="phone" required minlength="10"
+                            maxlength="10">
+                        <div class="shake-tooltip-contact" *ngIf="updateContactError != ''">{{updateContactError}}</div>
+
+
+                        <div class="col-xs-12 editdata">DESIGNATION</div>
+                        <input type="text" class="etextbox designation-cap" [(ngModel)]="designation" name="designation">
+                        <div class="shake-tooltip-contact" *ngIf="updateDesgError != ''">{{updateDesgError}}</div>
+
+
+                        <div class="col-xs-12 editdata">USER TYPE</div>
+                        <input type="text" class="etextbox" value="staff" name="userType" disabled>
+
+                        <input type="button" class="update-button" (click)="addStaff()" value="Add">
+
+                        <input type="button" (click)="this.modalRef.hide()" class="cancel-button" value="Cancel">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </ng-template>
+</div>

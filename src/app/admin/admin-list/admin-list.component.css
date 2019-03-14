@@ -26,3 +26,30 @@ hr{
     margin-top: 0%;
     border-top: 1px solid #000;
 }
+.staffList-btn{
+    position: relative;
+    top: 20px;
+    width: 120px;
+    height: 35px;
+    background-color: #806643;
+    font-family: 'poppins',sans-serif;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: 400;
+}
+.studentList-btn{
+    position: relative;
+    top: 20px;
+    width: 120px;
+    height: 35px;
+    background-color: #de4545ad;
+    font-family: 'poppins',sans-serif;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: 400;
+    left: 2%;
+}

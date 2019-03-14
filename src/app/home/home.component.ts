@@ -104,6 +104,7 @@ export class HomeComponent implements OnInit {
       console.log(userAccepted)
       if (userAccepted && userAccepted.length === 1) {
         localStorage.setItem("currentUser",userAccepted[0].userName);
+        localStorage.setItem('userType',userAccepted[0].userType);
         if ("admin" == this.userType) {
           console.log("admin executed")
           this.closeModal();

@@ -12,8 +12,8 @@
   .scroll-value{
     border-collapse: collapse;
     display: block;
-    max-height: 300px;
-    /* overflow-x: scroll !important; */
+    max-height: 293px;
+    overflow-x: scroll !important;
     /* width:50%; */
   }
   .tablediv{

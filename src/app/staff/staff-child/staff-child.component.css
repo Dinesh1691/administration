@@ -96,5 +96,18 @@
     .designation-cap{
         text-transform: capitalize;
     }
+    .staff-header{
+        left: 4.5%;
+        position: relative;
+    }
+    .back-btn{
+        border: none;
+        background-color: antiquewhite;
+        cursor: pointer;
+        outline: none;
+        position: relative;
+        top: 50px;
+        left: 1%;
+    }
     
 
