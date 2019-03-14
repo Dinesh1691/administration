@@ -30,9 +30,9 @@
                             <td class="history_table_tr_td col-xs-2">{{data.phoneno}}</td>
                             <td class="history_table_tr_td col-xs-2 designation-cap">{{data.designation}}</td>
                             <td class="col-xs-2 history_table_tr_td" (click)="updateStaff(data);openModal(updateModal)">
-                                <a class="update-div">Update</a>
+                                <a class="update-div cursor-class">Update</a>
                             </td>
-                            <td class="col-xs-2" (click)="deleteStaff(data.id)">
+                            <td class="col-xs-2 cursor-class" (click)="deleteStaff(data.id)">
                                 <a>Delete</a>
                             </td>
                         </ng-container>

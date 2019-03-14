@@ -57,8 +57,8 @@
   .scroll-value{
     border-collapse: collapse;
     display: block;
-    max-height: 293px;
-    overflow-x: scroll !important;
+    max-height: 250px;
+    overflow-y: scroll !important;
     /* width:50%; */
   }
   .tablediv{
@@ -193,4 +193,7 @@
         position: relative;
         top: 50px;
         left: 1%;
+    }
+    .cursor-class{
+        cursor: pointer;
     }

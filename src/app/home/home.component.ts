@@ -6,7 +6,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { GlobalService } from '../global.service';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-
+import * as $ from 'jquery';
 
 @Component({
 	selector: 'app-home',
