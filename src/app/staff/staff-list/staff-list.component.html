@@ -7,49 +7,9 @@
   </div>
 
   <hr>
-  <h3 class="title-subheader"> Your Student and Staff Information :</h3>
+  <h3 class="title-subheader"> Your Staff and Student  Information :</h3>
 
-  <button type="button" class="logout-btn" routerLink="/staff/staffchild">Staff List</button>
+  <button type="button" class="staff-btn" routerLink="/staff/staffchild">Staff List</button>
 
-  <button type="button" class="logout-btn" routerLink="/staff/staffcrud">Student List</button>
-
-  <!-- 
-    <div class="col-sm-12 col-xs-12  table_class">
-      <div class="bs-component scroll-value" >
-        <table class="table history_table">
-          <thead>
-            <tr class="history_table_tr">
-              <th class="col-lg-1 col-xs-1">ID</th>
-              <th class="col-xs-2">NAME</th>
-              <th class="col-xs-3">EMAIL ID</th>
-              <th class="col-xs-3">MOBILE NUMBER</th>
-              <th class="col-xs-3">DESIGNATION</th>
-             </tr>
-          </thead>
-  
-  
-          
-           <tbody>
-  
-            <tr *ngFor="let data of this.data">
-              <!-- <app-student-child  [data]="data"></app-student-child>  
-                <ng-container *ngIf = "this.data.userType == 'staff'">
-                  <td class="history_table_tr_td col-xs-1" >{{data.id}}</td>
-                  <td id="username" class="history_table_tr_td col-xs-2 " >{{data.userName}}</td>                                        
-                  <td class="history_table_tr_td col-xs-3">{{data.email}}</td>
-                  <td class="history_table_tr_td col-xs-3">{{data.phoneno}}</td>
-                  <td class="history_table_tr_td col-xs-3">{{data.designation}}</td>
-                </ng-container> 
-  
-            </tr>
-           
-          </tbody> 
-        
-        </table> 
-      </div>
-      </div> 
-  
-   -->
-
-
+  <button type="button" class="student-btn" routerLink="/staff/staffcrud">Student List</button>
 </div>
