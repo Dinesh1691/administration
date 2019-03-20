@@ -6,6 +6,7 @@
     <h2 class="staff-header">Staff Details :</h2>
     <button type="button" class="logout-btn" (click)="openModal(addModal)">Add Staff</button>
 
+<!-- Staff Information Table -->
     <div class="col-sm-12 col-xs-12  table_class">
         <div class="bs-component scroll-value">
             <table class="table history_table">
@@ -18,12 +19,9 @@
                     </tr>
                 </thead>
 
-
-
                 <tbody>
 
                     <tr class="border-div" *ngFor="let data of this.data">
-                        <!-- <app-student-child  [data]="data"></app-student-child>  -->
                         <ng-container *ngIf="this.data.userType == 'staff'">
                             <td id="username" class="history_table_tr_td col-xs-2 ">{{data.userName}}</td>
                             <td class="history_table_tr_td col-xs-2">{{data.email}}</td>
@@ -36,16 +34,13 @@
                                 <a>Delete</a>
                             </td>
                         </ng-container>
-
                     </tr>
-
                 </tbody>
-
             </table>
         </div>
     </div>
 
-
+    <!-- Popup for Updating Staff Details -->
     <ng-template #updateModal>
         <div class="col-sm-11 editcomponent pull-right">
             <div class="row total">
@@ -54,13 +49,13 @@
                     <div class="title">Edit Staff</div>
                     <div class="entire">
                         <div class="col-xs-12 editdata">NAME</div>
-                        <input type="text" class="etextbox" [(ngModel)]="dobj.userName" name="name">
+                        <input type="text" class="etextbox" [(ngModel)]="userNameUpd" name="name">
                         <div class="col-xs-12 editdata">EMAIL ID </div>
-                        <input type="text" class="etextbox" [(ngModel)]="dobj.email" name="email">
+                        <input type="text" class="etextbox" [(ngModel)]="emailUpd" name="email">
                         <div class="col-xs-12 editdata">MOBILE NUMBER</div>
-                        <input type="text" class="etextbox" appNumbersOnly [(ngModel)]="dobj.phoneno" name="phone">
+                        <input type="text" class="etextbox" appNumbersOnly [(ngModel)]="phonenoUpd" name="phone">
                         <div class="col-xs-12 editdata">DESIGNATION</div>
-                        <input type="text" class="etextbox designation-cap" [(ngModel)]="dobj.designation" name="designation">
+                        <input type="text" class="etextbox designation-cap" [(ngModel)]="designationUpd" name="designation">
 
                         <input type="button" class="update-button" value="Update" (click)="updateDetails()">
 
@@ -68,13 +63,11 @@
 
                     </div>
                 </div>
-
             </div>
         </div>
     </ng-template>
 
-
-
+    <!-- Popup for Adding Staff Details -->
     <ng-template #addModal>
         <div class="col-sm-11 editcomponent pull-right">
             <div class="row total">
@@ -115,7 +108,6 @@
 
                     </div>
                 </div>
-
             </div>
         </div>
     </ng-template>

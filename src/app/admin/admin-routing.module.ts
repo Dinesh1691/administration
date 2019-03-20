@@ -10,7 +10,7 @@ const routes: Routes = [
     component:AdminListComponent
   },
   {
-    path: 'adminCrud',
+    path: 'admincrud',
     component:AdminCrudComponent
   },
   {

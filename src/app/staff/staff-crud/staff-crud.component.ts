@@ -14,6 +14,10 @@ import { Http,Headers,Response } from '@angular/http';
   styleUrls: ['./staff-crud.component.css']
 })
 export class StaffCrudComponent implements OnInit {
+  userNameUpd: any;
+  emailUpd: any;
+  phonenoUpd: any;
+  departmentUpd: any;
   public modalRef: BsModalRef;
 
   data:any =[];
@@ -48,7 +52,7 @@ export class StaffCrudComponent implements OnInit {
     }
 
   ngOnInit() {
-    this.getStaffDetails();
+    this.getStudentDetails();
     this.updateContactError='';
 this.updateEmailError='';
 this.updateNameError='';
@@ -62,10 +66,15 @@ this.updateDeparError='';
 updateStudent(data){
 
 this.dobj=data;
+this.userNameUpd = this.dobj['userName'];
+this.emailUpd = this.dobj["email"];
+this.phonenoUpd = this.dobj["phoneno"];
+this.departmentUpd = this.dobj["department"];
+
 console.log("data value"+ JSON.stringify(this.dobj));
 }
 
-  getStaffDetails(){
+  getStudentDetails(){
     this.global.getJson().subscribe(res =>{
       this.data = res;
       console.log("data is fetching" + this.data);
@@ -77,10 +86,10 @@ console.log("data value"+ JSON.stringify(this.dobj));
    
       this.studentObj={
         
-        "userName":this.dobj["userName"],
-        "email":this.dobj["email"],
-        "phoneno":this.dobj["phoneno"],
-        "department":this.dobj["department"],
+        "userName":this.userNameUpd,
+        "email":this.emailUpd,
+        "phoneno":this.phonenoUpd,
+        "department":this.departmentUpd,
         "userType":this.dobj["userType"],
         "password":this.dobj["password"]
   
@@ -96,7 +105,7 @@ console.log("data value"+ JSON.stringify(this.dobj));
             alert("updated sucessfully");
             this.modalRef.hide();
         }
-        this.router.navigate(['/staff/staffcrud']);
+        this.getStudentDetails();
  
     });
   
@@ -110,7 +119,7 @@ console.log("data value"+ JSON.stringify(this.dobj));
 {
   const url=`${"http://localhost:5000/data"}/${id}`;
   this.http.delete(url,{headers:headers}).subscribe((res)=>{
-    this.getStaffDetails();
+    this.getStudentDetails();
   }); 
 }  
   }
@@ -182,7 +191,7 @@ else{
       {
           alert("added sucessfully");
           this.modalRef.hide();
-          this.getStaffDetails();
+          this.getStudentDetails();
 
       }
       else{

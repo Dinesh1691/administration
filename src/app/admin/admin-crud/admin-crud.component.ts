@@ -14,6 +14,10 @@ import { Http,Headers,Response } from '@angular/http';
   styleUrls: ['./admin-crud.component.css']
 })
 export class AdminCrudComponent implements OnInit {
+  designationUpd: any;
+  phonenoUpd: any;
+  emailUpd: any;
+  userNameUpd: any;
   public modalRef: BsModalRef;
   data:any =[];
   dobj:object={};
@@ -54,6 +58,11 @@ this.updateDesgError='';
   updateStaff(data){
 
     this.dobj=data;
+    this.userNameUpd = this.dobj['userName'];
+    this.emailUpd = this.dobj["email"];
+    this.phonenoUpd = this.dobj["phoneno"];
+    this.designationUpd = this.dobj["designation"];
+
     console.log("data value"+ JSON.stringify(this.dobj));
     }
     
@@ -70,10 +79,10 @@ this.updateDesgError='';
        
           this.staffObj={
             
-            "userName":this.dobj["userName"],
-            "email":this.dobj["email"],
-            "phoneno":this.dobj["phoneno"],
-            "designation":this.dobj["designation"],
+            "userName":this.userNameUpd,
+            "email":this.emailUpd,
+            "phoneno":this.phonenoUpd,
+            "designation":this.designationUpd,
             "userType":this.dobj["userType"],
             "password":this.dobj["password"]
       
@@ -88,8 +97,9 @@ this.updateDesgError='';
             {
                 alert("updated sucessfully");
                 this.modalRef.hide();
+                this.router.navigate(['/admin/admincrud']);
             }
-            this.router.navigate(['/admin/adminCrud']);
+            this.getStaffDetails();
      
         });
       

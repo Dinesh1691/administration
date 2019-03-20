@@ -47,13 +47,13 @@
                 <div class="title">Edit Student</div>
                 <div class="entire">
                     <div class="col-xs-12 editdata">NAME</div>
-                    <input type="text" class="etextbox" [(ngModel)]="dobj.userName" name="name">
+                    <input type="text" class="etextbox" [(ngModel)]="userNameUpd" name="name">
                     <div class="col-xs-12 editdata">EMAIL ID </div>
-                    <input type="text" class="etextbox" [(ngModel)]="dobj.email" name="email" >
+                    <input type="text" class="etextbox" [(ngModel)]="emailUpd" name="email" >
                     <div class="col-xs-12 editdata">MOBILE NUMBER</div>
-                    <input type="tel" class="etextbox" appNumbersOnly maxlength="10" [(ngModel)]="dobj.phoneno" name="phone">
+                    <input type="tel" class="etextbox" appNumbersOnly maxlength="10" [(ngModel)]="phonenoUpd" name="phone">
                     <div class="col-xs-12 editdata">DEPARTMENT</div>
-                    <input type="text" class="etextbox designation-cap" [(ngModel)]="dobj.department" name="department">
+                    <input type="text" class="etextbox designation-cap" [(ngModel)]="departmentUpd" name="department">
                    
                      <input type="button" class="update-button" value="Update" (click)="updateDetails()">
                      

@@ -18,7 +18,6 @@
 }
 
 .editdata{
-    color: #696969;
     margin-left:25px;
     color: #696969; 
     font-family: Poppins;	
@@ -107,7 +106,7 @@
         line-height: 27px;
     }
 
-    #username::first-letter{
+    #username{
         text-transform: capitalize;
     }
     .table>tbody>tr>td{
